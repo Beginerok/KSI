@@ -68,7 +68,7 @@ void FileReader::FileReader__(const char__ *filename,const char__ *state)
 				printf("Open failed on input file: %s\n", filename);
 #ifdef _WINDOWS_2
 				wchar_t path[MAX_PATH];
-				GetCurrentDirectory(sizeof(path),path);
+				GetCurrentDirectory(sizeof(path),(LPSTR)path);
 				//std::string path_in_string = path;
 				std::wcout << path/*path_in_string.c_str()*/ << std::endl;
 #endif // _WINDOWS
